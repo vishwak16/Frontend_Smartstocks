@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>homepage</title>
+    <!-- <link rel="stylesheet" href="homestyle.css">
+    <link rel="stylesheet" href="temp.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/fav-icon.svg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+
+        .h1 {
+            color: #f7f7f7;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px 0;
+            color: black;
+        }
+
+        .container2 {
+            color: #f7f7f7;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 30px 0;
+        }
+
+        header h1 {
+            float: left;
+        }
+
+        nav ul {
+            float: right;
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .hero {
+            background-size: cover;
+            background-position: center;
+            color: black;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #FF5733;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn1 {
+            display: inline-block;
+            background-color: #FF5733;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            width: 300px;
+        }
+
+        .btn:hover {
+            background-color: #FFA07A;
+        }
+
+        .section {
+            padding: 50px 0;
+            display: flex;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .section img,
+        .section video {
+            width: 20%;
+            border-radius: 20px;
+            margin: 0 20px;
+        }
+
+        .section div {
+            width: 60%;
+        }
+
+        .section h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+    
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .img1 {
+            height: 400px;
+            width: auto;
+            border-radius: 20px;
+        }
+
+        .imghead {
+            height: 30px;
+            width: 30px;
+            border-radius: 5px;
+        }
+
+        .nav-link {
+            cursor: pointer;
+        }
+        .news-blog{
+            margin: 0px;
+            padding: 0px;
+            font-family: poppins;
+            box-sizing: border-box;
+
+
+        }
+        a{
+            text-decoration: none;
+        }
+        ul{
+            list-style-type: none;
+        }
+        .blog-heading{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #blog{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 40px;
+            border-bottom: 1px solid rgba(0,0,0,0,0.05);
+
+        }
+        .blog-heading span{
+            color: #f33c3f;
+
+        }
+        .blog-heading h3{
+            font-size: 2.4rem;
+            color: #2b2b2b;
+            font-weight: 600;
+        }
+        .blog-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0px;
+            flex-wrap: wrap;
+        }
+        .blog-box{
+            width: 350px;
+            background-color: #ffffff;
+            border: 1px solid #ececec;
+            margin: 20px;
+        }
+        .bolg-img{
+            width: 100%;
+            height: auto;
+        }
+        .blog-img img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+
+        }
+        .blog-text{
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+        .blog-text span{
+            color: #f33c3f;
+            font: size 0.9rem;
+
+        }
+        .blog-text .blog-title{
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #272727;
+        }
+        .blog-text .blog-title:hover{
+            color: #f33c3c;
+            transition: all ease 0.3s;
+
+        }
+        .blog-text p{
+            color: #9b9b9b;
+            font-size: 0.9rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 20px 0px;
+
+
+        }
+        .blog-text a{
+            color: #0f0f0f;
+        }
+        .blog-text a:hover{
+            color: #f33c3c;
+            transition: all ease 0.3s;
+
+        }
+
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll(".nav-link");
+            links.forEach(link => {
+                link.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute("href").substring(1);
+                    document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><img src="Project_logo_homepage1.jpg" class="imghead"><a class="h1"> Smart-Stocks</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="top-stocks">Top stocks</a></li>
+                    <li><a href="https://finshots.in/archive/">News</a></li>
+                    <li><a href="#about" class="nav-link">About Us</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="login.html" class="btn">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h2>Welcome to Smart-Stock</h2>
+            <p>One-stop solution for all your stock market needs.</p>
+            <video class="img1" autoplay loop muted>
+                <source src="animation.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video><br><br>
+            <a href="signup.html" class="btn1">Get started</a>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <img src="about.jpg" alt="About Us">
+        <div>
+            <h3>About Us</h3>
+            <p>At Smart-Stocks, we go beyond traditional financial data in our investment analysis, integrating a variety of alternative data points to provide a more comprehensive view. Our unique methodology encompasses insights, in addition to our rigorous financial and technical insights and analysis. This multifaceted approach enables us to uncover unique investment opportunities and help our users make more informed investments.</p>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <img src="services.png" alt="Our Services">
+        <div>
+            <h3>Our Services</h3>
+            <p>We offer a range of services designed to help you succeed in the stock market. Our real-time data service provides up-to-the-minute information, our portfolio management tools help you keep track of your investments, and our financial analysis services offer deep insights to maximize your returns. We are dedicated to providing you with the tools and information you need to make informed investment decisions.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <img src="contact.png" alt="Contact Us">
+        <div>
+            <h3>Contact Us</h3>
+            <p>Have any questions? We'd love to hear from you. Get in touch with us at:
+            Email:<a href="contact@smart-stocks.com">contact@smart-stocks.com </a>
+            Our team is here to provide you with the support and information you need. Feel free to reach out to us with any inquiries or feedback.</p>
+        </div>
+    </section>
+    <section id="blog" class="news-blog" >
+        <div class="blog-heading">
+            <span>Recent Posts</span>
+            <h3>Latest News</h3>
+        </div>
+        <div class="blog-container">
+            <div class="blog-box">
+                <div class="blog-img">
+                    <img src="raymond-logo.png" alt="Blog">
+
+                </div>
+                <div class="blog-text">
+                    <span>11/07/2024</span>
+                    <a href="#" class="blog-title">Why Raymond shares are down by 35%</a>
+                    <p>Today, the company officially executes its demerger into two separate entities. This follows the board of directors' approval granted during a meeting held a week ago.</p>
+                    <a href="https://www.freepressjournal.in/business/raymond-shares-drown-over-35-on-scheduled-demerger-day">Readmore</a>
+
+                </div>
+            </div>
+            <div class="blog-box">
+                <div class="blog-img">
+                    <img src="NSE.jpg" alt="Blog">
+
+                </div>
+                <div class="blog-text">
+                    <span>11/07/2024</span>
+                    <a href="#" class="blog-title">Indian shares drop on profit booking, bank's drag</a>
+                    <p>Indian shares traded lower on Thursday, impacted by concerns over bank earnings and profit-booking, reversing earlier gains as benchmarks approached record highs.</p>
+                    <a href="https://theprint.in/india/indian-shares-drop-on-profit-booking-banks-drag/2169716/">Readmore</a>
+
+                </div>
+            </div>
+            <div class="blog-box">
+                <div class="blog-img">
+                    <img src="logisticicon.png" alt="Blog">
+
+                </div>
+                <div class="blog-text">
+                    <span>11/07/2024</span>
+                    <a href="#" class="blog-title">Best logistoc stocks in india</a>
+                    <p>India's logistics sector boosts international commerce and economic growth, ensuring swift, cost-effective transportation nationwide, making it the backbone of the Indian economy.</p>
+                    <a href="https://groww.in/blog/best-logistics-stocks-in-india">Readmore</a>
+
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+    
+
+    <footer>
+        <div class="container2">
+            <p>&copy; 2024 Smart-Stock. All rights reserved.</p>
+            <p>Investment involves market risks. Past performance is not indicative of future results. Please consult with a financial advisor before making any investment decisions.</p>
+        </div>
+    </footer>
+</body>
+</html>

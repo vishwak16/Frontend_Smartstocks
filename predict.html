@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Predictionpage</title>
+    <!-- <link rel="stylesheet" href="homestyle.css">
+    <link rel="stylesheet" href="temp.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/fav-icon.svg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+
+        .h1 {
+            color: #f7f7f7;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px 0;
+            color: black;
+        }
+
+        .container2 {
+            color: #f7f7f7;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 30px 0;
+        }
+
+        header h1 {
+            float: left;
+        }
+
+        nav ul {
+            float: right;
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+       
+
+    
+       
+
+        
+        
+    
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .img1 {
+            height: 400px;
+            width: auto;
+            border-radius: 20px;
+        }
+
+        .imghead {
+            height: 30px;
+            width: 30px;
+            border-radius: 5px;
+        }
+
+        .nav-link {
+            cursor: pointer;
+        }
+        .news-blog{
+            margin: 0px;
+            padding: 0px;
+            font-family: poppins;
+            box-sizing: border-box;
+
+
+        }
+        a{
+            text-decoration: none;
+        }
+        ul{
+            list-style-type: none;
+        }
+        .blog-heading{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #blog{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 40px;
+            border-bottom: 1px solid rgba(0,0,0,0,0.05);
+
+        }
+        .blog-heading span{
+            color: #f33c3f;
+
+        }
+        .blog-heading h3{
+            font-size: 2.4rem;
+            color: #2b2b2b;
+            font-weight: 600;
+        }
+        .blog-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0px;
+            flex-wrap: wrap;
+        }
+        .blog-box{
+            width: 350px;
+            background-color: #ffffff;
+            border: 1px solid #ececec;
+            margin: 20px;
+        }
+        .bolg-img{
+            width: 100%;
+            height: auto;
+        }
+        .blog-img img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+
+        }
+        .blog-text{
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+        .blog-text span{
+            color: #f33c3f;
+            font: size 0.9rem;
+
+        }
+        .blog-text .blog-title{
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #272727;
+        }
+        .blog-text .blog-title:hover{
+            color: #f33c3c;
+            transition: all ease 0.3s;
+
+        }
+        .blog-text p{
+            color: #9b9b9b;
+            font-size: 0.9rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 20px 0px;
+
+
+        }
+        .blog-text a{
+            color: #0f0f0f;
+        }
+        .blog-text a:hover{
+            color: #f33c3c;
+            transition: all ease 0.3s;
+
+        }
+
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll(".nav-link");
+            links.forEach(link => {
+                link.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute("href").substring(1);
+                    document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><img src="Project_logo_homepage1.jpg" class="imghead"><a class="h1"> Smart-Stocks</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="#">Top stocks</a></li>
+                    <li><a href="https://finshots.in/archive/">News</a></li>
+                    <li><a href="#about" class="nav-link">About Us</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="userprofile.html">Profile</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="container">
+            <h2>Stock Predictions</h2>
+            <p>Get the latest stock predictions and market insights.</p>
+        </div>
+    </section>
+
+    <main>
+        <div class="container">
+            <div class="stock-info">
+                <h2>Stock Data</h2>
+                <div id="stockData">Loading...</div>
+            </div>
+            <div class="chart-container">
+                <canvas id="stockChart"></canvas>
+            </div>
+        </div>
+    </main>
+
+   
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const stockDataDiv = document.getElementById('stockData');
+            const ctx = document.getElementById('stockChart').getContext('2d');
+
+            async function fetchStockData() {
+                try {
+                    const response = await fetch('/api/stock-data');
+                    const stockData = await response.json();
+
+                    // Display stock data
+                    stockDataDiv.innerHTML = '';
+                    stockData.forEach(stock => {
+                        const stockItem = document.createElement('p');
+                        stockItem.textContent = `Date: ${stock.date} - Price: $${stock.price}`;
+                        stockDataDiv.appendChild(stockItem);
+                    });
+
+                    // Prepare data for Chart.js
+                    const labels = stockData.map(stock => stock.date);
+                    const data = stockData.map(stock => stock.price);
+
+                    // Create chart
+                    new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: labels,
+                            datasets: [{
+                                label: 'Stock Price',
+                                data: data,
+                                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                                borderColor: 'rgba(75, 192, 192, 1)',
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    });
+                } catch (error) {
+                    console.error('Error fetching stock data:', error);
+                    stockDataDiv.textContent = 'Failed to load stock data.';
+                }
+            }
+
+            fetchStockData();
+        });
+    </script>
+    
+    
+
+    
+
+    
+
+    
+    <section id="blog" class="news-blog" >
+        <div class="blog-heading">
+            <span>Recent Posts</span>
+            <h3>Latest News</h3>
+        </div>
+        <div class="blog-container">
+            <div class="blog-box">
+                <div class="blog-img">
+                    <img src="raymond-logo.png" alt="Blog">
+
+                </div>
+                <div class="blog-text">
+                    <span>11/07/2024</span>
+                    <a href="#" class="blog-title">Why Raymond shares are down by 35%</a>
+                    <p>Today, the company officially executes its demerger into two separate entities. This follows the board of directors' approval granted during a meeting held a week ago.</p>
+                    <a href="https://www.freepressjournal.in/business/raymond-shares-drown-over-35-on-scheduled-demerger-day">Readmore</a>
+
+                </div>
+            </div>
+            <div class="blog-box">
+                <div class="blog-img">
+                    <img src="NSE.jpg" alt="Blog">
+
+                </div>
+                <div class="blog-text">
+                    <span>11/07/2024</span>
+                    <a href="#" class="blog-title">Indian shares drop on profit booking, bank's drag</a>
+                    <p>Indian shares traded lower on Thursday, impacted by concerns over bank earnings and profit-booking, reversing earlier gains as benchmarks approached record highs.</p>
+                    <a href="https://theprint.in/india/indian-shares-drop-on-profit-booking-banks-drag/2169716/">Readmore</a>
+
+                </div>
+            </div>
+            <div class="blog-box">
+                <div class="blog-img">
+                    <img src="logisticicon.png" alt="Blog">
+
+                </div>
+                <div class="blog-text">
+                    <span>11/07/2024</span>
+                    <a href="#" class="blog-title">Best logistoc stocks in india</a>
+                    <p>India's logistics sector boosts international commerce and economic growth, ensuring swift, cost-effective transportation nationwide, making it the backbone of the Indian economy.</p>
+                    <a href="https://groww.in/blog/best-logistics-stocks-in-india">Readmore</a>
+
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+    
+
+    <footer>
+        <div class="container2">
+            <p>&copy; 2024 Smart-Stock. All rights reserved.</p>
+            <p>Investment involves market risks. Past performance is not indicative of future results. Please consult with a financial advisor before making any investment decisions.</p>
+        </div>
+    </footer>
+</body>
+</html>
